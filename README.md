@@ -4,7 +4,7 @@ Aquest projecte implementa quatre classificadors diferents per predir l'espècie
 
 ## Estructura del projecte
 
-```
+```txt
 penguins_project/
 ├── environment.yml      # definició de l'entorn Conda
 ├── models/              # fitxers pickle dels models entrenats
