@@ -1,0 +1,13 @@
+name: penguins-env
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas
+  - seaborn
+  - scikit-learn
+  - flask
+  - requests
+  - numpy
+  - joblib
+  - pip
