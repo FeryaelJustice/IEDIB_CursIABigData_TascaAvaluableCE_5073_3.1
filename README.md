@@ -21,6 +21,21 @@ penguins_project/
 └── README.md            # aquest document
 ```
 
+## Configuració
+
+Primer hem de fer:
+
+```bash
+conda env create -f environment.yml
+conda activate penguins-env
+```
+
+Per sortir de l'entorn virtual:
+
+```bash
+conda deactivate penguins-env
+```
+
 ## Entrenament
 
 Els scripts d'entrenament es troben a la carpeta `scripts/`.  Cada script carrega el conjunt de dades, elimina les files amb valors buits, aplica una normalització estàndard a les columnes numèriques, codifica les variables categòriques mitjançant *one‑hot encoding* i entrena un model diferent.  En finalitzar, desarà el vectoritzador, els paràmetres de l'escalat i el model entrenat al directori `models/`.
@@ -28,7 +43,6 @@ Els scripts d'entrenament es troben a la carpeta `scripts/`.  Cada script carreg
 Per exemple, per entrenar la regressió logística:
 
 ```bash
-conda activate penguins-env
 python scripts/train_logreg.py
 ```
 
@@ -84,5 +98,6 @@ conda env create -f environment.yml
 
 ## Notes
 
+- Es important que s'utilitzi Python 3.10 com a mínim per aquest codi (en environment.yml ha d'estar així)
 - S'utilitza la llibreria `seaborn` per carregar el dataset dels pingüins, ja que ofereix els noms de columnes homogenis.  En cas de fer servir la versió de Kaggle (`penguins_size.csv`), els scripts normalitzen els noms perquè els models funcionin igual.
 - El codi està pensat perquè sigui clar i fàcil d'entendre, amb comentaris que expliquen els passos principals.
