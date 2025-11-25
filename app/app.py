@@ -20,7 +20,6 @@ The API will respond with a JSON object containing the predicted class index,
 the species name and a list of class probabilities.
 """
 
-import json
 import pickle
 from pathlib import Path
 
